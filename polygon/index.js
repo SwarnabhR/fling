@@ -11,8 +11,8 @@ app.use(cors("*"));
 
 app.post("/create-keypair", (req, res) => {
   try {
-    const DiamSdk = require("diamante-sdk-js");
-    const keypair = DiamSdk.Keypair.random();
+    const PolygonSdk = require("polygon-sdk-js");
+    const keypair = PolygonSdk.Keypair.random();
     res.json({
       publicKey: keypair.publicKey(),
       secret: keypair.secret(),
