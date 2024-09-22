@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.playfairfont {
+  font-family: "Playfair Display";
+}
+
+.dmsansfont {
+  font-family: "DM Sans";
+}
+
+.bgimg {
+  background-size: full;
+  margin: 0px 45px;
+}
+.bgimg2 {
+  background-size: full;
+  margin: 0px 180px;
+}
+
+.shadow-custom {
+  box-shadow: 0 4px 8px rgba(242, 78, 128, 0.5);
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: slide 10s linear infinite;
+}
+
+.marquee-content-right {
+  display: flex;
+  white-space: nowrap;
+  animation: slide-right 10s linear infinite;
+}
+
+.marquee-content p {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+.marquee::before {
+  left: 0;
+}
+
+.marquee::after {
+  right: 0;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.wallet-info-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.wallet-info-button {
+  display: flex;
+  align-items: center;
+  background-color: #f24e80;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.wallet-info-button:hover {
+  background-color: #e04070;
+}
+
+.wallet-icon {
+  background: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet-icon img {
+  width: 100%;
+  height: 100%;
+}
